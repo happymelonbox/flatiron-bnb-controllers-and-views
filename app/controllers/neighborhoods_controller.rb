@@ -7,6 +7,10 @@ class NeighborhoodsController < ApplicationController
     @neighborhood = Neighborhood.new
   end
 
+  def show
+    @neighborhood = Neighborhood.find(params[:id])
+  end
+
   def create
     @neighborhood = Neighborhood.new(neighborhoods_params)
 
